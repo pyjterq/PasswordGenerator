@@ -18,3 +18,12 @@ function generatePassword(){
     } 
     return passwordString;
 }
+
+
+// Write function which copy password to clipboard. Don't use execCommand!
+
+function copyPassword(){
+    const cb = navigator.clipboard;
+    const password1 = document.getElementById('password1');
+    cb.writeText(password1.textContent).then(() => alert("Password copied!"));
+}
