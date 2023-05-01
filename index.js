@@ -11,7 +11,6 @@ button.addEventListener('click', function(){
     password2.textContent = generatePassword();
     copyMessage1.style.visibility = 'hidden';
     copyMessage2.style.visibility = 'hidden';
-    copyPassword();
    }
 )
 
