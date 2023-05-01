@@ -3,10 +3,13 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 const button = document.getElementById('generate-button');
 const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
+const copyMessage = document.querySelector('.copy-message');
 
 button.addEventListener('click', function(){
     password1.textContent = generatePassword();
     password2.textContent = generatePassword();
+    copyMessage.style.visibility = 'hidden';
+    copyPassword();
    }
 )
 
@@ -18,12 +21,20 @@ function generatePassword(){
     } 
     return passwordString;
 }
+password1.addEventListener('click', function(){
+    copyPassword(password1);
+    }   
+)
 
+password2.addEventListener('click', function(){
+    copyPassword(password2);
+    }
+)
 
 // Write function which copy password to clipboard. Don't use execCommand!
 
-function copyPassword(){
+function copyPassword(password){
     const cb = navigator.clipboard;
-    const password1 = document.getElementById('password1');
-    cb.writeText(password1.textContent).then(() => alert("Password copied!"));
+    cb.writeText(password.textContent);
+    copyMessage.style.visibility = 'visible';
 }
