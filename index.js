@@ -9,7 +9,8 @@ let copyMessage2 = document.querySelector(`.copy-message2`);
 button.addEventListener('click', function(){
     password1.textContent = generatePassword();
     password2.textContent = generatePassword();
-    copyMessage.style.visibility = 'hidden';
+    copyMessage1.style.visibility = 'hidden';
+    copyMessage2.style.visibility = 'hidden';
     copyPassword();
    }
 )
