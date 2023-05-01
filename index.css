@@ -53,6 +53,9 @@ h1 {
     min-width: 300px;
     cursor: pointer;
 }
+.password-bg:hover {
+    background-color: #047857;
+}
 
 button {
     font-size: 1rem;
@@ -74,6 +77,7 @@ button:active {
   box-shadow: 0 5px #273549;
   transform: translateY(4px);
 }
-.copy-message {
+.copy-message1, .copy-message2 {
     visibility: hidden;
+    color: #fff;
 }

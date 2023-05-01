@@ -3,7 +3,8 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 const button = document.getElementById('generate-button');
 const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
-const copyMessage = document.querySelector('.copy-message');
+let copyMessage1 = document.querySelector(`.copy-message1`);
+let copyMessage2 = document.querySelector(`.copy-message2`);
 
 button.addEventListener('click', function(){
     password1.textContent = generatePassword();
@@ -36,5 +37,8 @@ password2.addEventListener('click', function(){
 function copyPassword(password){
     const cb = navigator.clipboard;
     cb.writeText(password.textContent);
-    copyMessage.style.visibility = 'visible';
+    if (password === password1)
+    copyMessage1.style.visibility = 'visible';
+    if (password === password2)
+    copyMessage2.style.visibility = 'visible';
 }
