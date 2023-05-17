@@ -2,13 +2,21 @@
 
 body {
     margin: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #1C1C1C;
     color: #fff;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    background-color: #1F2937;
+    padding: 7.1875em 3.25em;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
 h1 {
@@ -29,11 +37,6 @@ h1 {
     line-height: 1.75rem;
     margin: 10px 0 5px;
 } 
-.container {
-    padding: 2em;
-    background-color: #1F2937;
-    padding: 7.1875em 3.25em;
-}
 .break {
     display: block;
 }
@@ -43,6 +46,8 @@ h1 {
     column-gap: 1em;
     padding:  2.18752rem 0 0;
     border-top: 1px solid #2F3E53;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .password-bg {
